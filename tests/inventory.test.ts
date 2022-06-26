@@ -3,24 +3,24 @@ import { calcInventoryValue } from "../src/inventory";
 describe("calcInventoryValue", () => {
   test("three products", () => {
     const value: number = calcInventoryValue([
-      { product: { name: "apples", price: 5 }, quantity: 4 },
-      { product: { name: "oranges", price: 5 }, quantity: 5 },
-      { product: { name: "mangos", price: 5 }, quantity: 6 }
+      { product: { name: "motor", price: 10 }, quantity: 10 },
+      { product: { name: "sensor", price: 12.50 }, quantity: 4 },
+      { product: { name: "LED", price: 1 }, quantity: 20 }
     ]);
-    expect(value).toBe(75);
+    expect(value).toBe(170);
   });
   test("two products", () => {
     const value: number = calcInventoryValue([
-      { product: { name: "greens", price: 3 }, quantity: 10 },
-      { product: { name: "cornbread", price: 4 }, quantity: 15 }
+      { product: { name: "Motor", price: 10 }, quantity: 10 },
+      { product: { name: "LED", price: 1 }, quantity: 20 }
     ]);
-    expect(value).toBe(90);
+    expect(value).toBe(120);
   });
   test("one product", () => {
     const value: number = calcInventoryValue([
-      { product: { name: "desk", price: 120 }, quantity: 2 }
+      { product: { name: "sensor", price: 12.50 }, quantity: 4 }
     ]);
-    expect(value).toBe(240);
+    expect(value).toBe(50);
   });
   test("zero products", () => {
     const value: number = calcInventoryValue([]);

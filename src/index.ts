@@ -1,3 +1,3 @@
-import './mountains';
-import './products';
-import './inventory';
+import { Mountain } from './mountains';
+import { Product } from './products';
+import { InventoryItem } from './inventory';
